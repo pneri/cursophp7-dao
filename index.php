@@ -2,11 +2,24 @@
 
 require_once("config.php");
 
-//Carrega o usuario usando login e senha
 $usuario = new Usuario();
-$usuario->login("root", "!@#$");
+
+$usuario->loadbyId(29);
+
+$usuario->update("professora", "!@qwer3456");
 
 echo $usuario;
+
+
+//Criando um novo usuario
+//$aluno = new Usuario("aluno", "@aluno");
+//$aluno->insert();
+//echo $aluno;
+
+//Carrega o usuario usando login e senha
+//$usuario = new Usuario();
+//$usuario->login("root", "!@#$");
+//echo $usuario;
 
 //Carrega uma lista de usuarios buscando pelo login
 //$search = Usuario::search("j");
@@ -20,6 +33,7 @@ echo $usuario;
 //Carrega uma lista de usuarios
 //$lista = usuario::getlist();
 //echo json_encode($lista);
+
 
 
 
